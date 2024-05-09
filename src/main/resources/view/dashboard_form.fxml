@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="690.0" prefWidth="1112.0" style="-fx-background-color: #d63031;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormController">
+   <children>
+      <AnchorPane fx:id="miniDash" layoutX="221.0" layoutY="10.0" prefHeight="663.0" prefWidth="868.0" style="-fx-background-color: #dfe6e9;">
+         <children>
+            <ImageView fitHeight="645.0" fitWidth="362.0" layoutX="288.0" layoutY="2.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/dash-back.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="578.0" fitWidth="882.0" layoutX="-3.0" layoutY="84.0" opacity="0.39" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/new2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="578.0" fitWidth="872.0" layoutX="-4.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/new2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="324.0" fitWidth="485.0" layoutX="387.0" layoutY="338.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/new2.jpg" />
+               </image></ImageView>
+            <ImageView fitHeight="315.0" fitWidth="419.0" layoutX="452.0" layoutY="273.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/new2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="364.0" fitWidth="419.0" layoutX="452.0" layoutY="2.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/new2.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="34.0" layoutY="413.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #ED4C67;">
+               <children>
+                  <Text layoutX="42.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Items" />
+                  <Text layoutX="60.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4800" />
+                  <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/item-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="676.0" layoutY="413.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #FDA7DF;">
+               <children>
+                  <Text layoutX="32.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Employees" />
+                  <Text layoutX="69.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+                  <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="2.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/employee-icon.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="233.0" layoutY="413.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #D980FA;">
+               <children>
+                  <Text layoutX="42.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Orders" />
+                  <Text layoutX="65.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2800" />
+                  <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/order-icon.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="462.0" layoutY="413.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #B53471;">
+               <children>
+                  <Text layoutX="33.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Customers" />
+                  <Text layoutX="60.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3200" />
+                  <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/customer-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="215.0" layoutY="78.0" prefHeight="311.0" prefWidth="508.0" style="-fx-background-color: #EA2027;">
+               <children>
+                  <ImageView fitHeight="268.0" fitWidth="504.0" layoutX="16.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/pro.jpg" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <Text fill="#bf1a17" layoutX="375.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnBack1" layoutX="690.0" layoutY="576.0" mnemonicParsing="false" onAction="#btnBack1OnAction" prefHeight="37.0" prefWidth="81.0" style="-fx-background-color: #EE5A24;" text="&lt; Back" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="165.0" fitWidth="225.0" layoutX="-6.0" layoutY="10.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/log6.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="37.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/item-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="173.0" fitWidth="225.0" layoutX="-5.0" layoutY="162.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/log6.png" />
+         </image>
+      </ImageView>
+      <Text fill="#100557" layoutX="57.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can manage !" />
+      <ImageView fitHeight="56.0" fitWidth="81.0" layoutX="86.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/shop-icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="171.0" fitWidth="218.0" layoutY="472.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/log6.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnDash" layoutX="14.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnDashOnAction" prefHeight="56.0" prefWidth="184.0" style="-fx-background-color: #B784B7;" text="Dashboard" />
+      <ImageView fitHeight="161.0" fitWidth="225.0" layoutX="-7.0" layoutY="323.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/log6.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnItem" layoutX="14.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnItemOnAction" prefHeight="56.0" prefWidth="184.0" style="-fx-background-color: B784B7;" text="   Item Manage" />
+      <ImageView fitHeight="168.0" fitWidth="225.0" layoutX="-6.0" layoutY="509.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/log6.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="27.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/dashboard-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="27.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/item-icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSupplier" layoutX="14.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="56.0" prefWidth="184.0" style="-fx-background-color: B784B7;" text="    Supplier Manage" />
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="25.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/order-icon.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnCus" layoutX="14.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnCusOnAction" prefHeight="56.0" prefWidth="184.0" style="-fx-background-color: B784B7;" text="       Customer Manage" />
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="35.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/customer-icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEmp" layoutX="14.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnEmpOnAction" prefHeight="56.0" prefWidth="184.0" style="-fx-background-color: B784B7;" text="        Employee Manage" />
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="25.0" layoutY="440.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/employee-icon.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnPay" layoutX="14.0" layoutY="498.0" mnemonicParsing="false" onAction="#btnPayOnAction" prefHeight="56.0" prefWidth="184.0" style="-fx-background-color: B784B7;" text="         Payment Manage" />
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="27.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/payment-icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnPlaceOrder" layoutX="14.0" layoutY="575.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefHeight="56.0" prefWidth="184.0" style="-fx-background-color: B784B7;" text="Place Order" />
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="37.0" layoutY="593.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/order-icon.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

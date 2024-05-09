@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="648.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="387.0" fitWidth="842.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/cus.in1.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="183.0" layoutY="13.0" prefHeight="372.0" prefWidth="652.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="387.0" fitWidth="681.0" layoutY="-15.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/cus.in1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="354.0" fitWidth="627.0" layoutX="-176.0" layoutY="-15.0" opacity="0.13" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/Cus.back.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="244.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Form">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="-47.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID :" />
+            <Text layoutX="-48.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
+            <Text layoutX="394.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="366.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
+            <Text layoutX="-47.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number :" />
+            <TextField fx:id="txtId" layoutX="-47.0" layoutY="111.0" prefHeight="24.0" prefWidth="214.0" />
+            <TextField fx:id="txtName" layoutX="-48.0" layoutY="174.0" prefHeight="24.0" prefWidth="214.0" />
+            <TextField fx:id="txtTel" layoutX="-47.0" layoutY="244.0" prefHeight="24.0" prefWidth="214.0" />
+            <TextField fx:id="txtAddress" layoutX="365.0" layoutY="111.0" prefHeight="24.0" prefWidth="199.0" />
+            <TextField fx:id="txtEmail" layoutX="365.0" layoutY="174.0" prefHeight="24.0" prefWidth="199.0" />
+            <Button fx:id="btnDelete" layoutX="394.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="33.0" prefWidth="72.0" style="-fx-background-color: #e63946;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="btnUpdate" layoutX="483.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="33.0" prefWidth="72.0" style="-fx-background-color: #41B06E;" text="Update" />
+            <Button fx:id="btnSearch" layoutX="572.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="33.0" prefWidth="72.0" style="-fx-background-color: #ff6b81;" text="Search" />
+            <Text layoutX="364.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" />
+            <Button fx:id="btnBack" layoutX="302.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: ffb703;" text="Back" />
+            <Button fx:id="btnSave" layoutX="302.0" layoutY="252.0" mnemonicParsing="false" onAction="#btnSavetOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #1679AB;" text="Save">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="btnExit" layoutX="394.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #ff6348;" text="Exit" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="183.0" layoutY="366.0" prefHeight="283.0" prefWidth="673.0">
+         <children>
+            <ImageView fitHeight="301.0" fitWidth="549.0" layoutX="151.0" layoutY="-10.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/cus.in1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="310.0" fitWidth="549.0" layoutX="-183.0" layoutY="-13.0" opacity="0.42" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/cus.in1.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblCustomer" layoutX="-167.0" layoutY="30.0" prefHeight="223.0" prefWidth="810.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="121.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="150.0" text="Name" />
+                  <TableColumn fx:id="colTel" prefWidth="169.0" text="Tel" />
+                  <TableColumn fx:id="colAddress" prefWidth="171.0" text="Address" />
+                  <TableColumn fx:id="colEmail" prefWidth="197.0" text="Email" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

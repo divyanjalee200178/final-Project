@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="663.0" prefWidth="868.0" style="-fx-background-color: E1ACAC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SupplierFormController">
+   <children>
+      <AnchorPane layoutX="12.0" layoutY="13.0" prefHeight="637.0" prefWidth="840.0" style="-fx-background-color: FF6500;">
+         <children>
+            <ImageView fitHeight="474.0" fitWidth="846.0" layoutX="-1.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/Sup_back.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="501.0" fitWidth="843.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/Sup_back.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="277.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier Form">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="53.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier ID :" />
+            <Text layoutX="53.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" wrappingWidth="80.05029296875" />
+            <Text layoutX="53.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
+            <Text layoutX="456.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
+            <Text layoutX="456.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tel Number :" />
+            <TextField fx:id="txtId" layoutX="145.0" layoutY="82.0" prefHeight="24.0" prefWidth="188.0" />
+            <TextField fx:id="txtTel" layoutX="563.0" layoutY="146.0" prefHeight="24.0" prefWidth="188.0" />
+            <TextField fx:id="txtEmail" layoutX="563.0" layoutY="81.0" prefHeight="24.0" prefWidth="188.0" />
+            <TextField fx:id="txtAddress" layoutX="145.0" layoutY="205.0" prefHeight="24.0" prefWidth="188.0" />
+            <TextField fx:id="txtName" layoutX="145.0" layoutY="146.0" prefHeight="24.0" prefWidth="188.0" />
+            <Button fx:id="btnSave" layoutX="305.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #1679AB;" text="Save" />
+            <Button fx:id="btnUpdate" layoutX="384.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #41B06E;" text="Update" />
+            <Button fx:id="btnDelete" layoutX="463.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #e63946;" text="Delete" />
+            <Button fx:id="btnClear" layoutX="622.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: E8751A;" text="Clear" />
+            <Button fx:id="btnSearch" layoutX="542.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff6b81;" text="Search" />
+            <TableView fx:id="tblSupplier" layoutX="14.0" layoutY="312.0" prefHeight="247.0" prefWidth="794.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="142.0" text="Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="172.0" text="Address" />
+                  <TableColumn fx:id="colEmail" prefWidth="224.0" text="Email" />
+                  <TableColumn fx:id="colTel" prefWidth="180.0" text="Tel Number" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnExit" layoutX="637.0" layoutY="580.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff6348;" text="Exit" />
+            <Button fx:id="btnBack" layoutX="542.0" layoutY="580.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: ffb703;" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

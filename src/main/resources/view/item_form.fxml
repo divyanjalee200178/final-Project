@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="677.0" prefWidth="896.0" style="-fx-background-color: C40C0C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ItemFormController">
+   <children>
+      <AnchorPane fx:id="rootItem" layoutX="20.0" layoutY="18.0" prefHeight="645.0" prefWidth="858.0" style="-fx-background-color: FFC55A;">
+         <children>
+            <ImageView fitHeight="644.0" fitWidth="869.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/itBa.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="324.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Form">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#f20a0a" layoutX="24.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code :" />
+            <Text fill="#eb1b22" layoutX="24.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" />
+            <Text fill="#e80c0c" layoutX="23.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QtyOnHand :" />
+            <Text fill="#e81313" layoutX="441.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price :" />
+            <Text fill="#eb1212" layoutX="445.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location :" />
+            <TextField fx:id="txtCode" layoutX="21.0" layoutY="104.0" prefHeight="24.0" prefWidth="197.0" />
+            <TextField fx:id="txtDescription" layoutX="21.0" layoutY="179.0" prefHeight="24.0" prefWidth="197.0" />
+            <TextField fx:id="txtQty" layoutX="21.0" layoutY="251.0" prefHeight="24.0" prefWidth="197.0" />
+            <TextField fx:id="txtUnitPrice" layoutX="441.0" layoutY="104.0" prefHeight="24.0" prefWidth="197.0" />
+            <TextField fx:id="txtLocation" layoutX="445.0" layoutY="179.0" prefHeight="24.0" prefWidth="197.0" />
+            <Button fx:id="btnSave" layoutX="24.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #1679AB;" text="Save" />
+            <Button fx:id="btnUpdate" layoutX="128.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #41B06E;" text="Update" />
+            <Button fx:id="btnDelete" layoutX="24.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #e63946;" text="Delete" />
+            <Button fx:id="btnClear" layoutX="24.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: E8751A;" text="Clear" />
+            <Button fx:id="btnSearch" layoutX="128.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #ff6b81;" text="Search" />
+            <Button fx:id="btnBack" layoutX="642.0" layoutY="576.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: ffb703;" text="Back" />
+            <Button fx:id="btnExit" layoutX="750.0" layoutY="576.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #ff6348;" text="Exit" />
+            <Text layoutX="444.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item List :" />
+            <TableView fx:id="tblItem" layoutX="229.0" layoutY="245.0" prefHeight="311.0" prefWidth="621.0">
+              <columns>
+                <TableColumn fx:id="colCode" prefWidth="83.0" text="Code" />
+                <TableColumn fx:id="colDesc" prefWidth="153.0" text="Description" />
+                  <TableColumn fx:id="colQty" prefWidth="106.0" text="QtyOnHand" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="144.0" text="Unit Price" />
+                  <TableColumn fx:id="colLoacation" prefWidth="134.0" text="Location" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
