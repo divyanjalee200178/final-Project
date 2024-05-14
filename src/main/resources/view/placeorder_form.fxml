@@ -73,6 +73,7 @@
             </TableView>
             <Label fx:id="lblOrderId" layoutX="121.0" layoutY="71.0" prefHeight="24.0" prefWidth="84.0" />
             <ComboBox fx:id="cmbItemCode" layoutX="99.0" layoutY="192.0" onAction="#cmbItemCodeOnAction" prefHeight="24.0" prefWidth="101.0" />
+            <Button fx:id="btnPrint" layoutX="319.0" layoutY="572.0" mnemonicParsing="false" onAction="#btnPrintOnAction" prefHeight="32.0" prefWidth="121.0" style="-fx-background-color: D875C7;" text="Print Bill" />
          </children>
       </AnchorPane>
    </children>

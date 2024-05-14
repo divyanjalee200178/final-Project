@@ -238,4 +238,30 @@ public class EmployeeFormController {
         initialize();
     }
 
+    @FXML
+    void txtAddressOnAction(ActionEvent event) {
+        txtEmail.requestFocus();
+    }
+
+    @FXML
+    void txtEmailOnAction(ActionEvent event) {
+        txtTel.requestFocus();
+    }
+
+    @FXML
+    void txtIdOnAction(ActionEvent event) {
+        txtName.requestFocus();
+    }
+
+    @FXML
+    void txtNameOnAction(ActionEvent event) {
+        txtAddress.requestFocus();
+    }
+
+    @FXML
+    void txtTelOnAction(ActionEvent event) {
+
+    }
+
+
 }

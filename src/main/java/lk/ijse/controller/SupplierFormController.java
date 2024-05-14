@@ -268,4 +268,28 @@ public class SupplierFormController {
         Regex.setTextColor(lk.ijse.util.TextField.ID,txtId);
     }*/
 
+    @FXML
+    void txtAddressOnAction(ActionEvent event) {
+        txtEmail.requestFocus();
+    }
+
+    @FXML
+    void txtEmailOnAction(ActionEvent event) {
+        txtTel.requestFocus();
+    }
+
+    @FXML
+    void txtIdOnAction(ActionEvent event) {
+        txtName.requestFocus();
+    }
+
+    @FXML
+    void txtNameOnAction(ActionEvent event) {
+        txtAddress.requestFocus();
+    }
+
+    @FXML
+    void txtTelOnAction(ActionEvent event) {
+
+    }
 }

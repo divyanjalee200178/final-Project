@@ -12,20 +12,23 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.db.DbConnection;
 import lk.ijse.model.*;
 import lk.ijse.model.tm.CartTm;
 import lk.ijse.repository.CustomerRepo;
 import lk.ijse.repository.ItemRepo;
 import lk.ijse.repository.OrderRepo;
 import lk.ijse.repository.PlaceorderRepo;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class PlaceorderFormController {
 
@@ -64,6 +67,9 @@ public class PlaceorderFormController {
     private TableColumn<CartTm, Double> colUnitPrice;
 
     @FXML
+    private Button btnPrint;
+
+    @FXML
     private Label lblCustomerName;
 
     @FXML
@@ -92,6 +98,7 @@ public class PlaceorderFormController {
 
     @FXML
     private TextField txtQty;
+    String tempId;
 
     private ObservableList<CartTm> obList = FXCollections.observableArrayList();
 
@@ -316,5 +323,31 @@ public class PlaceorderFormController {
     void txtQtyOnAction(ActionEvent event) {
         btnAddToCartOnAction(event);
     }
+
+    @FXML
+    void btnPrintOnAction(ActionEvent event) throws JRException, SQLException {
+
+           /* JasperDesign jasperDesign = JRXmlLoader.load("src/main/resources/Report/SupRepo.jrxml");
+            JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
+
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, DbConnection.getInstance().getConnection());
+            JasperViewer.viewReport(jasperPrint,false);*/
+        printBill();
+
+        }
+
+    private void printBill() throws JRException, SQLException {
+        JasperDesign jasperDesign=JRXmlLoader.load("src/main/resources/Report/SupRepo.jrxml");
+        JasperReport jasperReport=JasperCompileManager.compileReport(jasperDesign);
+
+        Map<String,Object>data =new HashMap<>();
+        data.put("tempId",lblOrderId.getText());
+        data.put("OrderId",tempId);
+        data.put("total",lblNetTotal.getText());
+
+        JasperPrint jasperPrint=JasperFillManager.fillReport(jasperReport,data,DbConnection.getInstance().getConnection());
+        JasperViewer.viewReport(jasperPrint,false);
+    }
+
 
 }

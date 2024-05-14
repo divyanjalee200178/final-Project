@@ -34,11 +34,11 @@
             <Text layoutX="38.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
             <Text layoutX="275.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
             <Text layoutX="275.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tel Number :" />
-            <TextField fx:id="txtId" layoutX="38.0" layoutY="98.0" />
-            <TextField fx:id="txtTel" layoutX="274.0" layoutY="185.0" />
-            <TextField fx:id="txtEmail" layoutX="274.0" layoutY="96.0" />
-            <TextField fx:id="txtAddress" layoutX="38.0" layoutY="261.0" />
-            <TextField fx:id="txtName" layoutX="38.0" layoutY="185.0" />
+            <TextField fx:id="txtId" layoutX="38.0" layoutY="98.0" onAction="#txtIdOnAction" />
+            <TextField fx:id="txtTel" layoutX="274.0" layoutY="185.0" onAction="#txtTelOnAction" />
+            <TextField fx:id="txtEmail" layoutX="274.0" layoutY="96.0" onAction="#txtEmailOnAction" />
+            <TextField fx:id="txtAddress" layoutX="38.0" layoutY="261.0" onAction="#txtAddressOnAction" />
+            <TextField fx:id="txtName" layoutX="38.0" layoutY="185.0" onAction="#txtNameOnAction" />
             <Text layoutX="23.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee List :" />
             <TableView fx:id="tblEmployee" layoutX="12.0" layoutY="332.0" prefHeight="257.0" prefWidth="597.0">
               <columns>

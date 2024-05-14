@@ -4,11 +4,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.db.DbConnection;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DashboardFormController {
 
@@ -45,7 +52,37 @@ public class DashboardFormController {
     private AnchorPane rootItem;
 
     @FXML
+    private Label lblItemCount;
+
+    @FXML
     private AnchorPane root;
+
+    private int ItemCount;
+
+
+    public void initialize(){
+        try {
+            ItemCount = getItemCount();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+        setItemCount(ItemCount);
+    }
+    private void setItemCount(int ItemCount) {
+        lblItemCount.setText(String.valueOf(ItemCount));
+    }
+    private int getItemCount() throws SQLException {
+        String sql = "SELECT COUNT(*) AS ItemCount FROM Item";
+
+        Connection connection = DbConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if(resultSet.next()) {
+            return resultSet.getInt("ItemCount");
+        }
+        return 0;
+    }
     @FXML
     void btnBack1OnAction(ActionEvent event) throws IOException {
         navigateToTheLoginForm();
