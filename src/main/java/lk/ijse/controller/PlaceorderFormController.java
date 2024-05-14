@@ -334,6 +334,7 @@ public class PlaceorderFormController {
             JasperViewer.viewReport(jasperPrint,false);*/
         printBill();
 
+
         }
 
     private void printBill() throws JRException, SQLException {
