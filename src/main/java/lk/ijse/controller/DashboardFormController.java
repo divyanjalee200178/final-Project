@@ -55,18 +55,42 @@ public class DashboardFormController {
     private Label lblItemCount;
 
     @FXML
+    private Label lblEmployeeCount;
+
+    @FXML
+    private Label lblCustomerCount;
+
+    @FXML
+    private Label lblOrderCount;
+
+    @FXML
     private AnchorPane root;
 
     private int ItemCount;
-
-
-    public void initialize(){
+    private int EmployeeCount;
+    private  int CustomerCount;
+    private int OrderCount;
+    public void initialize() {
+        tryItem();
+        tryEmployee();
+        tryCustomer();
+        tryOrders();
+    }
+    public void tryItem() {
         try {
             ItemCount = getItemCount();
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
         setItemCount(ItemCount);
+    }
+private void tryEmployee(){
+        try {
+            EmployeeCount = getEmployeeCount();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+        setEmployeeCount(EmployeeCount);
     }
     private void setItemCount(int ItemCount) {
         lblItemCount.setText(String.valueOf(ItemCount));
@@ -83,6 +107,72 @@ public class DashboardFormController {
         }
         return 0;
     }
+
+    private void setEmployeeCount(int EmployeeCount) {
+        lblEmployeeCount.setText(String.valueOf(EmployeeCount));
+    }
+    private int getEmployeeCount() throws SQLException {
+        String sql = "SELECT COUNT(*) AS EmployeeCount FROM Employee";
+
+        Connection connection = DbConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if(resultSet.next()) {
+            return resultSet.getInt("EmployeeCount");
+        }
+        return 0;
+    }
+
+    private void tryCustomer(){
+        try {
+            CustomerCount = getCustomerCount();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+        setCustomerCount(CustomerCount);
+    }
+    private void setCustomerCount(int CustomerCount) {
+        lblCustomerCount.setText(String.valueOf(CustomerCount));
+    }
+    private int getCustomerCount() throws SQLException {
+        String sql = "SELECT COUNT(*) AS CustomerCount FROM Customer";
+
+        Connection connection = DbConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if(resultSet.next()) {
+            return resultSet.getInt("CustomerCount");
+        }
+        return 0;
+    }
+
+    private void tryOrders(){
+        try {
+            OrderCount = getOrderCount();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+        setOrderCount(OrderCount);
+    }
+    private void setOrderCount(int OrderCount) {
+        lblOrderCount.setText(String.valueOf(OrderCount));
+    }
+    private int getOrderCount() throws SQLException {
+        String sql = "SELECT COUNT(*) AS OrderCount FROM Orders";
+
+        Connection connection = DbConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if(resultSet.next()) {
+            return resultSet.getInt("OrderCount");
+        }
+        return 0;
+    }
+
+
     @FXML
     void btnBack1OnAction(ActionEvent event) throws IOException {
         navigateToTheLoginForm();

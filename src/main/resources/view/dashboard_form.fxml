@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -22,7 +23,7 @@
                   <Image url="@../icon/new2.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="578.0" fitWidth="872.0" layoutX="-3.0" layoutY="2.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="600.0" fitWidth="879.0" layoutX="-3.0" layoutY="2.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icon/new2.jpg" />
                </image>
@@ -31,7 +32,7 @@
                <image>
                   <Image url="@../icon/new2.jpg" />
                </image></ImageView>
-            <ImageView fitHeight="315.0" fitWidth="419.0" layoutX="452.0" layoutY="273.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="504.0" fitWidth="687.0" layoutX="184.0" layoutY="1.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icon/new2.jpg" />
                </image>
@@ -41,7 +42,7 @@
                   <Image url="@../icon/new2.jpg" />
                </image>
             </ImageView>
-            <AnchorPane layoutX="676.0" layoutY="413.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #FDA7DF;">
+            <AnchorPane layoutX="676.0" layoutY="420.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #FDA7DF; -fx-background-radius: 10; -fx-border-color: #B53471; -fx-border-radius: 10;">
                <children>
                   <Text layoutX="32.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Employees" />
                   <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="2.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
@@ -49,10 +50,10 @@
                         <Image url="@../icon/employee-icon.jpg" />
                      </image>
                   </ImageView>
-                  <Label fx:id="lblEmployeeCount" layoutX="58.0" layoutY="48.0" prefHeight="37.0" prefWidth="67.0" text="Label" />
+                  <Label fx:id="lblEmployeeCount" layoutX="58.0" layoutY="48.0" prefHeight="37.0" prefWidth="67.0" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="233.0" layoutY="413.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #D980FA;">
+            <AnchorPane layoutX="250.0" layoutY="420.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #EA2027; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #B53471;">
                <children>
                   <Text layoutX="42.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Orders" />
                   <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
@@ -62,8 +63,11 @@
                   </ImageView>
                   <Label fx:id="lblOrderCount" layoutX="58.0" layoutY="48.0" prefHeight="28.0" prefWidth="49.0" />
                </children>
+               <effect>
+                  <DropShadow />
+               </effect>
             </AnchorPane>
-            <AnchorPane layoutX="462.0" layoutY="413.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #B53471;">
+            <AnchorPane layoutX="462.0" layoutY="420.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #B53471; -fx-background-radius: 10; -fx-border-radius: 10;">
                <children>
                   <Text layoutX="33.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Customers" />
                   <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
@@ -74,24 +78,32 @@
                   <Label fx:id="lblCustomerCount" layoutX="59.0" layoutY="42.0" prefHeight="28.0" prefWidth="49.0" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="215.0" layoutY="78.0" prefHeight="311.0" prefWidth="508.0" style="-fx-background-color: #EA2027;">
+            <AnchorPane layoutX="215.0" layoutY="78.0" opacity="0.89" prefHeight="311.0" prefWidth="508.0" style="-fx-background-color: #EA2027; -fx-border-radius: 10; -fx-background-radius: 10;">
                <children>
                   <ImageView fitHeight="268.0" fitWidth="504.0" layoutX="16.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icon/pro.jpg" />
                      </image>
                   </ImageView>
-               </children></AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect></AnchorPane>
             <Text fill="#bf1a17" layoutX="375.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
             <Button fx:id="btnBack1" layoutX="690.0" layoutY="576.0" mnemonicParsing="false" onAction="#btnBack1OnAction" prefHeight="37.0" prefWidth="81.0" style="-fx-background-color: #EE5A24;" text="&lt; Back" />
-            <AnchorPane layoutX="47.0" layoutY="420.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #D980FA;">
+            <AnchorPane layoutX="47.0" layoutY="420.0" prefHeight="96.0" prefWidth="154.0" style="-fx-background-color: #D980FA; -fx-background-radius: 10; -fx-border-color: #B53471; -fx-border-radius: 10;">
                <children>
                   <Text layoutX="47.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item count" />
                   <Label fx:id="lblItemCount" layoutX="59.0" layoutY="54.0" prefHeight="28.0" prefWidth="57.0" />
+                  <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/item-icon.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </children>

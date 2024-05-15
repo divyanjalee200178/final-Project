@@ -107,15 +107,18 @@ public class ItemFormController {
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
 
             if (textField == txtUnitPrice && !newValue.matches("^\\d+(\\.\\d{1,2})?$")){
-                new Alert(Alert.AlertType.INFORMATION,"you can only use 'double'").show();
+                //new Alert(Alert.AlertType.INFORMATION,"you can only use 'double'").show();
+                txtUnitPrice.setStyle("-fx-focus-color:#f21e0f");
                 txtUnitPrice.clear();
+            }else {
+                txtUnitPrice.setStyle("-fx-focus-color:#c4c1c0");
             }
         });
 
         textField.textProperty().addListener((observable, oldValue, newValue) -> {
 
             if (textField == txtQty && !newValue.matches("^-?\\d+$")){
-                new Alert(Alert.AlertType.INFORMATION,"you can only use 'int'").show();
+                //new Alert(Alert.AlertType.INFORMATION,"you can only use 'int'").show();
                 txtQty.clear();
             }
         });
@@ -157,6 +160,7 @@ public class ItemFormController {
     @FXML
     void btnClearOnAction(ActionEvent event) {
         clearFields();
+        txtCode.requestFocus();
     }
 
     private void clearFields(){

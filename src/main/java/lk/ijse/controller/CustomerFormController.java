@@ -258,4 +258,30 @@ public class CustomerFormController {
         txtEmail.setText("");
     }
 
+    @FXML
+    void txtAddressOnAction(ActionEvent event) {
+        txtEmail.requestFocus();
+    }
+
+    @FXML
+    void txtEmailOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void txtIdOnAction(ActionEvent event) {
+        txtName.requestFocus();
+    }
+
+    @FXML
+    void txtNameOnAction(ActionEvent event) {
+        txtTel.requestFocus();
+    }
+
+    @FXML
+    void txtTelOnAction(ActionEvent event) {
+        txtAddress.requestFocus();
+    }
+
+
 }

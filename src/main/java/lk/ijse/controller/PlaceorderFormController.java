@@ -273,6 +273,7 @@ public class PlaceorderFormController {
         try {
             boolean isPlaced = PlaceorderRepo.placeOrder(po);
             if(isPlaced) {
+                tempId=lblOrderId.getText();
                 getCurrentOrderId();
                 new Alert(Alert.AlertType.CONFIRMATION, "Order Placed!").show();
            } else {
@@ -342,7 +343,7 @@ public class PlaceorderFormController {
         JasperReport jasperReport=JasperCompileManager.compileReport(jasperDesign);
 
         Map<String,Object>data =new HashMap<>();
-        data.put("tempId",lblOrderId.getText());
+//        data.put("tempId","O29");
         data.put("OrderId",tempId);
         data.put("total",lblNetTotal.getText());
 
