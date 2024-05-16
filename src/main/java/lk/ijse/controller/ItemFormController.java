@@ -276,4 +276,30 @@ public class ItemFormController {
 
     }
 
+    @FXML
+    void txtCodeOnAction(ActionEvent event) {
+        txtDescription.requestFocus();
+    }
+
+    @FXML
+    void txtDescriptionOnAction(ActionEvent event) {
+        txtQty.requestFocus();
+    }
+
+    @FXML
+    void txtLocationOnAction(ActionEvent event) {
+        txtUnitPrice.requestFocus();
+    }
+
+    @FXML
+    void txtQtyOnAction(ActionEvent event) {
+        txtLocation.requestFocus();
+    }
+
+    @FXML
+    void txtUnitPriceOnAction(ActionEvent event) {
+        txtCode.requestFocus();
+    }
+
+
 }

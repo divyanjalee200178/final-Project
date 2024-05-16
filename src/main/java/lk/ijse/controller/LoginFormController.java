@@ -129,6 +129,17 @@ private AnchorPane rootNode;
         stage.setTitle("Change Password Form");
         stage.show();
     }
+
+    @FXML
+    void txtPasswordOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void txtUserIdOnAction(ActionEvent event) {
+
+    txtPassword.requestFocus();
+    }
 }
 
 

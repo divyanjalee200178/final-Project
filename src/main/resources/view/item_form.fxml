@@ -29,11 +29,11 @@
             <Text fill="#e80c0c" layoutX="23.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QtyOnHand :" />
             <Text fill="#e81313" layoutX="441.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price :" />
             <Text fill="#eb1212" layoutX="445.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location :" />
-            <TextField fx:id="txtCode" layoutX="21.0" layoutY="104.0" prefHeight="24.0" prefWidth="197.0" />
-            <TextField fx:id="txtDescription" layoutX="21.0" layoutY="179.0" prefHeight="24.0" prefWidth="197.0" />
-            <TextField fx:id="txtQty" layoutX="21.0" layoutY="251.0" prefHeight="24.0" prefWidth="197.0" />
-            <TextField fx:id="txtUnitPrice" layoutX="441.0" layoutY="104.0" prefHeight="24.0" prefWidth="197.0" />
-            <TextField fx:id="txtLocation" layoutX="445.0" layoutY="179.0" prefHeight="24.0" prefWidth="197.0" />
+            <TextField fx:id="txtCode" layoutX="21.0" layoutY="104.0" onAction="#txtCodeOnAction" prefHeight="24.0" prefWidth="197.0" />
+            <TextField fx:id="txtDescription" layoutX="21.0" layoutY="179.0" onAction="#txtDescriptionOnAction" prefHeight="24.0" prefWidth="197.0" />
+            <TextField fx:id="txtQty" layoutX="21.0" layoutY="251.0" onAction="#txtQtyOnAction" prefHeight="24.0" prefWidth="197.0" />
+            <TextField fx:id="txtUnitPrice" layoutX="441.0" layoutY="104.0" onAction="#txtUnitPriceOnAction" prefHeight="24.0" prefWidth="197.0" />
+            <TextField fx:id="txtLocation" layoutX="445.0" layoutY="179.0" onAction="#txtLocationOnAction" prefHeight="24.0" prefWidth="197.0" />
             <Button fx:id="btnSave" layoutX="24.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #1679AB;" text="Save" />
             <Button fx:id="btnUpdate" layoutX="128.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #41B06E;" text="Update" />
             <Button fx:id="btnDelete" layoutX="24.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #e63946;" text="Delete" />

@@ -9,34 +9,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootNode" prefHeight="470.0" prefWidth="724.0" style="-fx-background-color: C40C0C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegisterFormController">
+<AnchorPane fx:id="rootNode" prefHeight="572.0" prefWidth="887.0" style="-fx-background-color: C40C0C;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegisterFormController">
    <children>
       <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="405.0" prefWidth="644.0">
          <children>
-            <ImageView fitHeight="452.0" fitWidth="684.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="533.0" fitWidth="842.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icon/dBut.jpg" />
                </image>
             </ImageView>
-            <TextField fx:id="txtUserID" layoutX="55.0" layoutY="239.0" />
-            <Text layoutX="254.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Form">
+            <TextField fx:id="txtUserID" layoutX="55.0" layoutY="239.0" onAction="#txtUserIdOnAction" prefHeight="24.0" prefWidth="208.0" />
+            <Text layoutX="341.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Form">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Text>
-            <Button fx:id="btnSave" layoutX="543.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="34.0" prefWidth="70.0" style="-fx-background-color: F57D1F;" text="Save" />
-            <TextField fx:id="txtPassword" layoutX="55.0" layoutY="314.0" />
+            <Button fx:id="btnSave" layoutX="643.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="34.0" prefWidth="70.0" style="-fx-background-color: F57D1F;" text="Save" />
+            <TextField fx:id="txtPassword" layoutX="55.0" layoutY="314.0" onAction="#txtPasswordOnAction" prefHeight="24.0" prefWidth="208.0" />
             <Text layoutX="55.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" />
             <Text layoutX="55.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:" />
-            <TextField fx:id="txtname" layoutX="372.0" layoutY="239.0" />
-            <Text layoutX="372.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
-            <Circle fill="#8df584" layoutX="334.0" layoutY="131.0" radius="56.0" stroke="BLACK" strokeType="INSIDE" />
-            <ImageView fitHeight="77.0" fitWidth="85.0" layoutX="297.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="txtname" layoutX="435.0" layoutY="239.0" onAction="#txtNameOnAction" prefHeight="24.0" prefWidth="208.0" />
+            <Text layoutX="435.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
+            <Circle fill="#8df584" layoutX="421.0" layoutY="132.0" radius="56.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="77.0" fitWidth="85.0" layoutX="384.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icon/regi.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnExit" layoutX="458.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="34.0" prefWidth="70.0" style="-fx-background-color: F57D1F;" text="Exit" />
+            <Button fx:id="btnExit" layoutX="523.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="34.0" prefWidth="70.0" style="-fx-background-color: F57D1F;" text="Exit" />
          </children>
       </AnchorPane>
    </children>

@@ -30,6 +30,23 @@ public class RegisterFormController {
     private TextField txtUserID;
     public AnchorPane rootNode;
 
+   public void initialize(){
+       addRegex(txtUserID);
+   }
+
+    private void addRegex(TextField textField) {
+        textField.textProperty().addListener((observable, oldValue, newValue) -> {
+
+            if (textField == txtUserID && !newValue.matches("^U.*$")){
+                txtUserID.setStyle("-fx-focus-color:#f21e0f");
+                txtUserID.clear();
+            }else {
+                txtUserID.setStyle("-fx-focus-color:#c4c1c0");
+            }
+        });
+
+
+    }
     @FXML
     void btnExitOnAction(ActionEvent event) throws IOException {
         navigateToTheLoginForm();
@@ -74,6 +91,21 @@ public class RegisterFormController {
         pstm.setObject(3, password);
 
         return pstm.executeUpdate() > 0;
+    }
+
+    @FXML
+    void txtNameOnAction(ActionEvent event) {
+        txtUserID.requestFocus();
+    }
+
+    @FXML
+    void txtPasswordOnAction(ActionEvent event) {
+        txtname.requestFocus();
+    }
+
+    @FXML
+    void txtUserIdOnAction(ActionEvent event) {
+        txtPassword.requestFocus();
     }
 
 }

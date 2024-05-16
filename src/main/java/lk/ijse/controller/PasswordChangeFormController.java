@@ -9,12 +9,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.db.DbConnection;
 import lk.ijse.model.Employee;
 import lk.ijse.model.User;
 import lk.ijse.repository.EmployeeRepo;
 import lk.ijse.repository.UserRepo;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class PasswordChangeFormController {
@@ -39,8 +42,8 @@ public class PasswordChangeFormController {
 
     @FXML
     void btnExitOnAction(ActionEvent event) throws IOException {
-        AnchorPane anchorPane= FXMLLoader.load(getClass().getResource("/view/login_form.fxml"));
-        Stage stage=(Stage) rootNode.getScene().getWindow();
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/login_form.fxml"));
+        Stage stage = (Stage) rootNode.getScene().getWindow();
 
         stage.setScene(new Scene(anchorPane));
         stage.setTitle("Login Form");
@@ -49,22 +52,22 @@ public class PasswordChangeFormController {
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
-        String id=txtUserId.getText();
-        String name=txtConfirmPass.getText();
-        String pw=txtNewPass.getText();
+        String id = txtUserId.getText();
+        String name = txtConfirmPass.getText();
+        String pw = txtNewPass.getText();
 
 
-        User user=new User(id,name,pw);
+        User user = new User(id, name, pw);
 
-        try{
-            boolean isUpdated= UserRepo.update(user);
-            if(isUpdated) {
+        try {
+            boolean isUpdated = UserRepo.update(user);
+            if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "User updated !").show();
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
 
     }
-
 }
+

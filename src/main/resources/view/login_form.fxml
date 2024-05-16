@@ -61,8 +61,8 @@
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="txtUserID" layoutX="18.0" layoutY="48.0" />
-                        <TextField fx:id="txtPassword" layoutX="18.0" layoutY="123.0" />
+                        <TextField fx:id="txtUserID" layoutX="18.0" layoutY="48.0" onAction="#txtUserIdOnAction" />
+                        <TextField fx:id="txtPassword" layoutX="18.0" layoutY="123.0" onAction="#txtPasswordOnAction" />
                         <Button fx:id="btnLogin" layoutX="83.0" layoutY="168.0" mnemonicParsing="false" onAction="#btnLoginOnAction" style="-fx-background-color: #FD0000;" text="Login" />
                      </children>
                   </AnchorPane>

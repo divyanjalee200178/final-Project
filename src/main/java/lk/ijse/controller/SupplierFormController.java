@@ -92,8 +92,31 @@ public class SupplierFormController {
     public void initialize(){
         setCellValueFactory();
         loadAllSupplier();
+        addRegex(txtId);
+        addRegex(txtTel);
     }
 
+    private void addRegex(TextField textField) {
+        textField.textProperty().addListener((observable, oldValue, newValue) -> {
+
+            if (textField == txtId && !newValue.matches("^S.*$")){
+                txtId.setStyle("-fx-focus-color:#f21e0f");
+                txtId.clear();
+            }else {
+                txtId.setStyle("-fx-focus-color:#c4c1c0");
+            }
+        });
+
+        textField.textProperty().addListener((observable, oldValue, newValue) -> {
+
+            if (textField == txtTel && !newValue.matches("^\\d{1,10}$")){
+                txtTel.setStyle("-fx-focus-color:#f21e0f");
+                txtTel.clear();
+            }else {
+                txtTel.setStyle("-fx-focus-color:#c4c1c0");
+            }
+        });
+    }
     private void setCellValueFactory(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
