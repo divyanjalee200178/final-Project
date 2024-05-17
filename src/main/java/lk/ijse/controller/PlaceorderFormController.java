@@ -345,7 +345,7 @@ public class PlaceorderFormController {
         Map<String,Object>data =new HashMap<>();
 //        data.put("tempId","O29");
         data.put("OrderId",tempId);
-        data.put("total",lblNetTotal.getText());
+        data.put("NetTotal",lblNetTotal.getText());
 
         JasperPrint jasperPrint=JasperFillManager.fillReport(jasperReport,data,DbConnection.getInstance().getConnection());
         JasperViewer.viewReport(jasperPrint,false);
