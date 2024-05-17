@@ -98,4 +98,28 @@ public class SupplierRepo {
         return idList;
     }
 
+    public static Supplier searchByNumber(String tele) throws SQLException{
+        String sql="SELECT * FROM Supplier WHERE number=?";
+
+        Connection connection=DbConnection.getInstance().getConnection();
+        PreparedStatement pstm=connection.prepareStatement(sql);
+        pstm.setObject(1,tele);
+
+        ResultSet resultSet=pstm.executeQuery();
+        if(resultSet.next()){
+            String sup_id=resultSet.getString(1);
+            String name=resultSet.getString(2);
+            String address=resultSet.getString(3);
+            String email=resultSet.getString(4);
+            String tel=resultSet.getString(5);
+
+            Supplier supplier=new Supplier(sup_id,name,address,email,tel);
+
+            return supplier;
+
+        }
+        return null;
+    }
+
+
 }

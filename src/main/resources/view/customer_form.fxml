@@ -57,6 +57,9 @@
                   <Font name="System Bold" size="13.0" />
                </font></Button>
             <Button fx:id="btnExit" layoutX="394.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #ff6348;" text="Exit" />
+            <TextField fx:id="txtTelSearch" layoutX="-47.0" layoutY="310.0" prefHeight="24.0" prefWidth="214.0" />
+            <Text layoutX="-47.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Phone number :" />
+            <Button fx:id="btnEnter" layoutX="107.0" layoutY="310.0" mnemonicParsing="false" onAction="#btnEnterOnAction" prefHeight="24.0" prefWidth="61.0" text="Enter" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="183.0" layoutY="366.0" prefHeight="283.0" prefWidth="673.0">

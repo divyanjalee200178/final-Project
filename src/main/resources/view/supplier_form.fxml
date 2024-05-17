@@ -55,6 +55,9 @@
             </TableView>
             <Button fx:id="btnExit" layoutX="637.0" layoutY="580.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ff6348;" text="Exit" />
             <Button fx:id="btnBack" layoutX="542.0" layoutY="580.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: ffb703;" text="Back" />
+            <TextField fx:id="txtTelSearch" layoutX="563.0" layoutY="205.0" prefHeight="24.0" prefWidth="249.0" />
+            <Text layoutX="399.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Phone number :" />
+            <Button fx:id="btnEnter" layoutX="751.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnEnterOnAction" prefHeight="24.0" prefWidth="61.0" text="Enter" />
          </children>
       </AnchorPane>
    </children>

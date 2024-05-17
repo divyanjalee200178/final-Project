@@ -2,6 +2,7 @@ package lk.ijse.repository;
 
 import lk.ijse.db.DbConnection;
 import lk.ijse.model.Customer;
+import lk.ijse.model.Supplier;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -70,5 +71,30 @@ public class CustomerRepo {
 
         return null;
     }
+
+    public static Customer searchByNumber(String tele) throws SQLException {
+        String sql = "SELECT * FROM Customer WHERE number = ?";
+
+        Connection connection = DbConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setObject(1, tele);
+
+        ResultSet resultSet = pstm.executeQuery();
+        if (resultSet.next()) {
+            String cu_id = resultSet.getString(1);
+            String name = resultSet.getString(2);
+            String address = resultSet.getString(3);
+            String email=resultSet.getString(4);
+            String tel = resultSet.getString(5);
+
+            Customer customer = new Customer(cu_id, name, address, email,tel);
+
+            return customer;
+        }
+
+        return null;
+    }
+
+
 
 }

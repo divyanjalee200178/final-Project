@@ -13,8 +13,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.db.DbConnection;
 import lk.ijse.model.Customer;
+import lk.ijse.model.Supplier;
 import lk.ijse.model.tm.CustomerTm;
 import lk.ijse.repository.CustomerRepo;
+import lk.ijse.repository.SupplierRepo;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -77,6 +79,13 @@ public class CustomerFormController {
 
     @FXML
     private TextField txtTel;
+
+    @FXML
+    private Button btnEnter;
+
+    @FXML
+    private TextField txtTelSearch;
+
 
 
     public void initialize(){
@@ -305,6 +314,24 @@ public class CustomerFormController {
     @FXML
     void txtTelOnAction(ActionEvent event) {
         txtAddress.requestFocus();
+    }
+
+    @FXML
+    void btnEnterOnAction(ActionEvent event) throws SQLException {
+        String tele=txtTelSearch.getText();
+
+        Customer customer= CustomerRepo.searchByNumber(tele);
+        if(customer !=null){
+            txtId.setText(customer.getId());
+            txtName.setText(customer.getName());
+            txtAddress.setText(customer.getAddress());
+            txtEmail.setText(customer.getEmail());
+            txtTel.setText(customer.getTel());
+        }else {
+            new Alert(Alert.AlertType.INFORMATION, "Supplier not found !").show();
+
+        }
+
     }
 
 

@@ -49,6 +49,9 @@
                   <TableColumn fx:id="colTel" prefWidth="135.0" text="Tel Number" />
               </columns>
             </TableView>
+            <TextField fx:id="txtTelSearch" layoutX="274.0" layoutY="261.0" prefHeight="24.0" prefWidth="228.0" />
+            <Text layoutX="274.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the Phone number :" />
+            <Button fx:id="btnEnter" layoutX="442.0" layoutY="261.0" mnemonicParsing="false" onAction="#btnEnterOnAction" prefHeight="24.0" prefWidth="61.0" text="Enter" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="634.0" layoutY="15.0" prefHeight="635.0" prefWidth="222.0" style="-fx-background-color: E1ACAC;">

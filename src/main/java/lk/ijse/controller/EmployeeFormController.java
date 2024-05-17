@@ -85,6 +85,12 @@ public class EmployeeFormController {
     @FXML
     private TextField txtTel;
 
+    @FXML
+    private Button btnEnter;
+
+    @FXML
+    private TextField txtTelSearch;
+
     public void initialize(){
         setCellValueFactory();
         loadAllEmployee();
@@ -286,6 +292,27 @@ public class EmployeeFormController {
     void txtTelOnAction(ActionEvent event) {
 
     }
+
+
+    @FXML
+    void btnEnterOnAction(ActionEvent event) throws SQLException {
+        String tele=txtTelSearch.getText();
+
+        Employee employee=EmployeeRepo.searchByTel(tele);
+        if(employee !=null){
+            //txtId.setText(employee.getId());
+            txtId.setText(employee.getId());
+            txtName.setText(employee.getName());
+            txtAddress.setText(employee.getAddress());
+            txtEmail.setText(employee.getEmail());
+            txtTel.setText(employee.getTel());
+        }else {
+            new Alert(Alert.AlertType.INFORMATION, "Employee not found !").show();
+
+        }
+
+    }
+
 
 
 }

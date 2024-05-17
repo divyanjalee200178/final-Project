@@ -98,4 +98,27 @@ public class EmployeeRepo {
         return idList;
     }
 
+    public static Employee searchByTel(String tele) throws SQLException{
+        String sql="SELECT * FROM Employee WHERE number=?";
+
+        Connection connection=DbConnection.getInstance().getConnection();
+        PreparedStatement pstm=connection.prepareStatement(sql);
+        pstm.setObject(1,tele);
+
+        ResultSet resultSet=pstm.executeQuery();
+        if(resultSet.next()){
+            String em_id=resultSet.getString(1);
+            String name=resultSet.getString(2);
+            String address=resultSet.getString(3);
+            String email=resultSet.getString(4);
+            String tel=resultSet.getString(5);
+
+            Employee employee=new Employee(em_id,name,address,email,tel);
+
+            return employee;
+
+        }
+        return null;
+    }
+
 }

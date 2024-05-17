@@ -89,6 +89,12 @@ public class SupplierFormController {
     @FXML
     private TextField txtTel;
 
+    @FXML
+    private Button btnEnter;
+
+    @FXML
+    private TextField txtTelSearch;
+
     public void initialize(){
         setCellValueFactory();
         loadAllSupplier();
@@ -313,6 +319,24 @@ public class SupplierFormController {
 
     @FXML
     void txtTelOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnEnterOnAction(ActionEvent event) throws SQLException {
+        String tele=txtTelSearch.getText();
+
+        Supplier supplier=SupplierRepo.searchByNumber(tele);
+        if(supplier !=null){
+            txtId.setText(supplier.getId());
+            txtName.setText(supplier.getName());
+            txtAddress.setText(supplier.getAddress());
+            txtEmail.setText(supplier.getEmail());
+            txtTel.setText(supplier.getTel());
+        }else {
+            new Alert(Alert.AlertType.INFORMATION, "Supplier not found !").show();
+
+        }
 
     }
 }
